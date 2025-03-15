@@ -1,11 +1,9 @@
-
 {% extends "reviews/base.html" %}
-
 {% block title %}
     Your Review
 {% endblock %}
 {% block content %}
-    <form action="/" mathod="POST">
+    <form action="{% url 'review_name' %}" mathod="POST">
         {% csrf_token %} 
         {% for field in form %}
             <div class="form-control {% if field.user_name.errors %}errors{% endif %}">
@@ -16,4 +14,4 @@
         {% endfor %}    
         <button type="submit">Send</button>
     </form> 
-{% endblcok %}
+{% endblock %}
