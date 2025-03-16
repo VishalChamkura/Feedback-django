@@ -127,3 +127,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # CSRF_TRUSTED_ORIGINS = [
 #     "https://*.github.dev"
 # ]
+
+MEDIA_ROOT = BASE_DIR / "uploads"
+MEDIA_URL = "/for-media/"
