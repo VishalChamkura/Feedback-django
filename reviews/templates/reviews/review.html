@@ -3,7 +3,7 @@
     Your Review
 {% endblock %}
 {% block content %}
-    <form action="{% url 'review_name' %}" mathod="POST">
+    <form action="/" mathod="POST">
         {% csrf_token %} 
         {% for field in form %}
             <div class="form-control {% if field.user_name.errors %}errors{% endif %}">
